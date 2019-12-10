@@ -5,6 +5,7 @@ const AjaxReturn = require('./utils/AjaxReturn');
 const news = require('./modules/news/news')
 const home = require('./modules/sys/default')
 const bd_news = require('./modules/news/baidu')
+const weibo_hot = require('./modules/news/weibo')
 
 //
 // exports.routes = [
@@ -48,8 +49,12 @@ exports.register = function (request, response,) {
             'handler': news,
         },
         {
-            'url': '/bd_news',
+            'url': '/baidu_news',
             'handler': bd_news,
+        },
+        {
+            'url': '/weibo_hot',
+            'handler': weibo_hot,
         }
     ];
 
